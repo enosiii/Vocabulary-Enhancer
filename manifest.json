@@ -1,0 +1,47 @@
+{
+  "id": "/Vocabulary/",
+  "name": "Vocabulary Enhancer",
+  "short_name": "English Vocabulary",
+  "description": "A web app to enhance your vocabulary and English communication skills.",
+  "start_url": "/Vocabulary/index.html",
+  "scope": "/Vocabulary/",
+  "display": "fullscreen",
+  "display_override": ["standalone", "fullscreen"],
+  "background_color": "#4CAF50",
+  "theme_color": "#4CAF50",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/Vocabulary/assets/screen1.png",
+      "sizes": "720x1430",
+      "type": "image/png"
+    },
+    {
+      "src": "/Vocabulary/assets/screen2.png",
+      "sizes": "720x1430",
+      "type": "image/png"
+    },
+    {
+      "src": "/Vocabulary/assets/screen3.png",
+      "sizes": "720x1430",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["books", "education", "productivity"],
+  "launch_handler": {
+    "client_mode": "navigate-new"
+  },
+  "lang": "en"
+}

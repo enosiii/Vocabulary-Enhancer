@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Enhance your english vocabulary with this app. The Vocabulary Enhancer app is designed to expand your vocabulary and improve your English communication skills. Each paragraph introduces a variety of sophisticated words and phrases, helping you broaden your linguistic repertoire." />
+  <meta name="og:image" content="https://enosiii.github.io/Vocabulary/assets/vocabulary-screens.png">
+  <meta name="twitter:image" content="https://enosiii.github.io/Vocabulary/assets/vocabulary-screens.png">
+    
+  <link rel="icon" href="assets/icon-512.png">
+  <title>Vocabulary Enhancer</title>
+  <link rel="stylesheet" href="styles4.css">
+  <meta name="theme-color" content="#4CAF50">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+  
+  <!-- Remove the FontAwesome Kit -->
+  <!-- <script src="https://kit.fontawesome.com/effcbc0526.js" crossorigin="anonymous"></script> -->
+  <!-- Add Local FontAwesome -->
+  <link rel="stylesheet" href="css/fontawesome.css">
+  <link rel="stylesheet" href="css/all.min.css">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="dark.css">
+  <script src="dark.js"></script>
+  
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js', { scope: '/' })
+        .then(() => console.log('Service Worker Registered'))
+        .catch(err => console.log('Service Worker Registration Failed: ', err));
+    }
+  </script>
+</head>
+  
+<body>
+
+  <!-- Overlay -->
+  <div id="overlay" class="hidden"></div>
+
+
+  <!-- Menu Button (☰) -->
+  <div id="menu-container">
+    <button id="menu-btn">☰</button>
+    <div id="menu-dropdown">
+      <ul>
+        <li id="menu-selection">Settings</li>
+        <li id="menu-mode"><i class="fa-solid fa-moon"></i> Dark Mode</li>
+        <li id="menu-install" style="display: none;"><i class="fa-solid fa-download"></i> Install</li>
+        <hr>
+        <li><a href="mailto:enosrigortan@gmail.com" aria-label="Send feedback via email"><i class="fa-solid fa-envelope"></i> Feedback</a></li>
+        <li><a href="https://www.paypal.me/enosrigortan" target="_blank" aria-label="Donate via PayPal"><i class="fa-brands fa-paypal"></i> Donate via Paypal</a></li>
+        <hr>
+        <li id="menu-about"><i class="fa-solid fa-circle-info"></i> About <i class="fa-solid fa-chevron-right"></i></li>
+        <div id="about-content" class="hidden">
+          <p>
+            The Vocabulary Enhancer app is designed to expand your vocabulary and improve your English communication skills. Each paragraph introduces a variety of sophisticated words and phrases, helping you broaden your linguistic repertoire.
+          </p>
+          <p>
+            By repeatedly reading these paragraphs, you will not only enhance your vocabulary but also develop a deeper appreciation for the nuances of the English language.
+          </p>
+          <hr>
+          <p>© 2025 Daddymon | Built with ♥</p>
+        </div>
+      </ul>
+    </div>
+  </div>
+
+  <header>
+    <h1>
+        <img src="assets/icon.png" alt="Vocabulary Enhancer app icon" style="width: 40px; height: 40px;" loading="lazy">
+        Vocabulary Enhancer
+    </h1>
+    <p>Repeatedly reading these paragraphs will help improve your English vocabulary and communication skills.</p>
+  </header>
+
+  <main>
+    <div id="card-container">
+      <!-- Cards will be dynamically inserted here -->
+    </div>
+    <div id="navigation">
+      <button id="prev-btn" aria-label="Previous">← Previous</button>
+      <button id="next-btn" aria-label="Next">Next →</button>
+    </div>
+  </main>
+
+  
+  <footer>
+
+    <ul class="share-buttons">
+      <li>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F"
+           title="Share on Facebook" target="_blank" rel="noopener">
+           <i class="fa-brands fa-square-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/intent/tweet?source=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F&text=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F%2F"
+           title="Tweet" target="_blank" rel="noopener">
+           <i class="fa-brands fa-square-x-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://plus.google.com/share?url=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F"
+           title="Share on Google+" target="_blank" rel="noopener">
+           <i class="fa-brands fa-square-google-plus"></i>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.tumblr.com/share?v=3&u=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F"
+           title="Post to Tumblr" target="_blank" rel="noopener">
+           <i class="fa-brands fa-square-tumblr"></i>
+        </a>
+      </li>
+      <li>
+        <a href="http://pinterest.com/pin/create/button/?url=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F"
+           title="Pin it" target="_blank" rel="noopener">
+           <i class="fa-brands fa-square-pinterest"></i>
+        </a>
+      </li>
+      <li>
+        <a href="http://www.reddit.com/submit?url=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F"
+           title="Submit to Reddit" target="_blank" rel="noopener">
+           <i class="fa-brands fa-square-reddit"></i>
+      </a>
+      </li>
+      <li>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F&source=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F"
+           title="Share on LinkedIn" target="_blank" rel="noopener">
+           <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </li>
+      <li>
+        <a href="mailto:?subject=&body=https%3A%2F%2Fenosiii.github.io%2FVocabulary%2F"
+           title="Send email" target="_blank" rel="noopener">
+           <i class="fa-solid fa-square-envelope"></i>
+        </a>
+      </li>
+</ul>
+
+    
+    <p><i class="fa-regular fa-copyright"></i> 2025 Daddymon | Built with <i class="fa-solid fa-heart"></i></p>
+
+    <a href="https://www.paypal.me/enosrigortan" title="Donate via Paypal">
+        <img alt="Donate via PayPal" src="https://img.shields.io/badge/Donate-PayPal-blue.svg" style="height: 20px;">
+    </a>
+
+  </footer>
+    
+  <script src="app4.js"></script>
+  <script src="install.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>  
+</body>
+</html>

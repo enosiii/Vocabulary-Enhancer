@@ -1,0 +1,194 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Overlay */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+/* Menu Button */
+#menu-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+#menu-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Dropdown Menu */
+#menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 2px;
+    z-index: 1000;
+    width:300px;
+    
+}
+
+#menu-dropdown ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-dropdown ul li {
+    padding: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+#menu-dropdown ul li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+#menu-dropdown ul hr {
+    margin: 5px 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+/* About Section (Initially Hidden) */
+.hidden {
+    display: none;
+}
+
+#about-content {
+    padding: 10px;
+    font-size: 0.8rem;
+    color: black;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 60vh;
+}
+
+/* Card Slider */
+#card-container {
+    width: 90%;
+    max-width: 600px;
+    overflow: hidden;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    cursor: grab;
+    opacity: 0.2;
+}
+
+/* Active card */
+.slick-active {
+    opacity: 1 !important;
+}
+
+.card h2 {
+    color: #4CAF50;
+}
+
+/* Navigation Buttons */
+#navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+#navigation button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#navigation button:hover {
+    background-color: #45a049;
+}
+
+
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+
+ul.share-buttons{
+    list-style: none;
+    padding: 0;
+  }
+
+  ul.share-buttons li{
+    display: inline;
+  }
+
+  ul.share-buttons .sr-only{
+    position: absolute;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+
+  ul.share-buttons li a {
+    text-decoration: none; /* Removes underline */
+    border: none; /* Ensures no extra border */
+    font-size: 1.75rem;
+    color: black;
+}
+
